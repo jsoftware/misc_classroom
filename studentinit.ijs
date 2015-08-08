@@ -30,10 +30,10 @@ if. #url do.
   scriptname =. '/' taketo&.|. url
   text 1!:2 scriptfn =. < jpath '~addons/' , scriptname
   NB. Append initialization to the config file
-  initline =. 'remoteprofile ' , quote url , LF [ 'require ''misc/classroom/remoteprofile'''
+  initline =. < 'remoteprofile ' , (quote url) , '[ require ''misc/classroom/remoteprofile''' , LF
   configfn =. < jpath '~config/startup.ijs'
   NB. If the script already contains remoteprofile, replace that
-  configlines =. <;._1 LF ,~^:(~: {:) CR -.~ 1!:1 configfn
+  configlines =. <;._2 LF ,~^:(~: {:) CR -.~ 1!:1 configfn
   if. 1 e. prevmsk =. 'remoteprofile '&([ -: #@[ {. ])&> configlines do.
     configlines =. initline (prevmsk i. 1)} configlines
   else.

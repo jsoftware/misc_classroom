@@ -31,4 +31,5 @@ end.
 
 NB. Execute the local copy
 script scriptfn
+i.0 0
 )
