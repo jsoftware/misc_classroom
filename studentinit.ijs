@@ -18,7 +18,7 @@ whilst. 0 = #url do.
   if. 0 = #url do. break. end.
   NB. Make sure it can be read
   'domain page' =. '/' (taketo ; dropto) url
-  'rc text' =. ((<,<'') ; domain ; page) webgetform 0 2 $ a:
+  'rc text' =. 2 {. ((<,<'') ; domain ; page) webgetform 0 2 $ a:
   if. (rc ~: 0) +. (0 = #text) do.
     NB. URL not found, try again
     wdinfo 'Try again';'That URL is unreadable'

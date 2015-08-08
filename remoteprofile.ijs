@@ -19,11 +19,14 @@ if. 0 = #url do. smoutput 'error loading profile - no URL' return. end.
 
 NB. Make sure it can be read
 'domain page' =. '/' (taketo ; dropto) url
-'rc text' =. ((<,<'') ; domain ; page) webgetform 0 2 $ a:
+'rc text' =. 2 {. ((<,<'') ; domain ; page) webgetform 0 2 $ a:
 
 NB. If the data was read OK, update the local copy in ~addons
 if. (rc = 0) *. (0 ~: #text) do.
-  text 1!:2 scriptfn
+  NB. Update only if data changed, so as to keep old date
+  if. text -.@-: 1!:1 scriptfn do.
+    text 1!:2 scriptfn
+  end.
 end.
 
 NB. Execute the local copy
