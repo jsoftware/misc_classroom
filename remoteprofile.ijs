@@ -24,7 +24,7 @@ NB. Make sure it can be read
 NB. If the data was read OK, update the local copy in ~addons
 if. (rc = 0) *. (0 ~: #text) do.
   NB. Update only if data changed, so as to keep old date
-  if. text -.@-: 1!:1 scriptfn do.
+  if. text -.@-: (1!:1 :: (''"_)) scriptfn do.
     text 1!:2 scriptfn
   end.
 end.
