@@ -28,7 +28,7 @@ end.
 if. #url do.
   NB. URL was readable - update it and the startup script
   scriptname =. '/' taketo&.|. url
-  text 1!:2 scriptfn =. < jpath '~addons/' , scriptname
+  text 1!:2 scriptfn =. < jpath '~config/' , scriptname
   NB. Append initialization to the config file
   initline =. < 'remoteprofile ' , (quote url) , '[ require ''misc/classroom/remoteprofile''' , LF
   configfn =. < jpath '~config/startup.ijs'
