@@ -33,7 +33,7 @@ if. #url do.
   initline =. < 'remoteprofile ' , (quote url) , '[ require ''misc/classroom/remoteprofile''' , LF
   configfn =. < jpath '~config/startup.ijs'
   NB. If the script already contains remoteprofile, replace that
-  configlines =. <;.2 LF ,~^:(~: {:) CR -.~ (1!:1 :: (''"_) configfn
+  configlines =. <;.2 LF ,~^:(~: {:) CR -.~ (1!:1 :: (''"_)) configfn
   if. 1 e. prevmsk =. 'remoteprofile '&([ -: #@[ {. ])&> configlines do.
     configlines =. initline (prevmsk i. 1)} configlines
   else.

@@ -1,6 +1,6 @@
 NB. manifest for classroom
 CAPTION=: 'Utilities for teaching classes in J'
-VERSION=: '1.0.4'
+VERSION=: '1.0.5'
 PLATFORMS=: ''
 FILES=: 0 : 0
 studentinit.ijs
