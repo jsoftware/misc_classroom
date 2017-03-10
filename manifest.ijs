@@ -1,12 +1,12 @@
 NB. manifest for classroom
 CAPTION=: 'Utilities for teaching classes in J'
-VERSION=: '1.0.6'
+VERSION=: '1.0.7'
 PLATFORMS=: ''
 FILES=: 0 : 0
 studentinit.ijs
 remoteprofile.ijs
 )
-RELEASE=: 'j803 j804 j805'
+RELEASE=: 'j803 j804 j805 j806'
 DEPENDS=: 0 : 0
 misc/miscutils
 sockets/socklib
