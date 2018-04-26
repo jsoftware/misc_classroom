@@ -6,7 +6,10 @@ FILES=: 0 : 0
 studentinit.ijs
 remoteprofile.ijs
 )
-RELEASE=: 'j803 j804 j805 j806 j807'
+RELEASE=: ''
+
+FOLDER=: 'misc/classroom'
+
 DEPENDS=: 0 : 0
 misc/miscutils
 sockets/socklib
